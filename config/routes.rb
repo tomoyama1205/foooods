@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'shops#index'
   resources :shops, only: :show do
   end
+  resources :users, only: :show do
+  end
 end
