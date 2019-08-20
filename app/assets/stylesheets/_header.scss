@@ -1,0 +1,28 @@
+.header {
+  background-color: black;
+  color: white;
+  height: 15vh;
+  max-width: 100%;
+  &__box {
+    line-height: 15vh;
+  }
+}
+
+.left-menu {
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+  text-align: right;
+  letter-spacing: 0.05em; 
+}
+
+.menu {
+  font-size: 18px;
+  color: white; 
+}
+
+.menu1 {
+  font-size: 18px;
+  color: white;
+  text-align: right;
+}
