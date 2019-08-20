@@ -1,0 +1,80 @@
+.show-box {
+  height: auto;
+  margin: 5vh auto;
+  width: 61vw;
+  border: groove;
+  padding: 50px;
+  &__title {
+    font-size: 30px;
+  }
+  &__img {
+    height: 25vh;
+    margin: 20px 0;
+  }
+  &__img1 {
+    height: 25vh;
+    width: 13vw;
+  }
+  &__img2 {
+    height: 25vh;
+    width: 13vw;
+  }
+  &__img3 {
+    height: 25vh;
+    width: 13vw;
+  }&__img4 {
+    height: 25vh;
+    width: 13vw;
+  }
+  &__text {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  &__time {
+    font-size: 15px;
+  }
+  &__holiday {
+    font-size: 15px;
+  }
+  &__phone {
+    font-size: 15px;
+  }
+  &__address {
+    font-size: 15px;
+  }
+  &__coment {
+    padding: 20px 0 50px;
+    border-bottom: solid; 
+    &__name {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+.top {
+  border-bottom: solid;
+  position: relative;
+  height: 60vh;
+}
+.stars-box {
+  position:absolute;
+}
+.stars-rating {
+  position: relative;
+  display:inline-block;
+  font-size: 25px;
+}
+.stars-rating .stars-rating-item{
+  position:absolute;
+  overflow: hidden;
+}
+.stars-rating .stars-rating-item:before{
+  content:"★★★★★";
+  color: #ffcc33;
+}
+.stars-rating:after {
+  content:"★★★★★";
+  color: #ccc;
+}
