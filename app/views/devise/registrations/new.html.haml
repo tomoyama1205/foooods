@@ -1,25 +1,27 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :nickname
-    %br/
-    = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+= render "shops/header"
+.signup-box
+  %h2.signup-box__title
+    Gutty
+  %h4.signup-box__title2
+    新規会員登録
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .field
+      = f.label :nickname
+      %br/
+      = f.text_field :nickname, class: "box", autofocus: true, autocomplete: "nickname",placeholder: "ニックネームを入力" 
+    .field
+      = f.label :email
+      %br/
+      = f.email_field :email, class: "box", autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力"
+    .field
+      = f.label :password
+      %br/
+      = f.password_field :password, class: "box", autocomplete: "new-password", placeholder: "パスワードを入力"
+    .field
+      = f.label "password confirmation"
+      %br/
+      = f.password_field :password_confirmation, class: "box", autocomplete: "new-password", placeholder: "パスワードを入力（確認）"
+    .field1
+      = f.submit "登録する",class: "btn"
+= render "shops/footer"

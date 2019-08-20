@@ -42,9 +42,13 @@
   &__address {
     font-size: 15px;
   }
+  &__title1 {
+    border-bottom: solid;
+    font-size: 20px; 
+  } 
   &__coment {
     padding: 20px 0 50px;
-    border-bottom: solid; 
+    border-bottom: solid;
     &__name {
       font-size: 20px;
     }
@@ -54,9 +58,8 @@
   }
 }
 .top {
-  border-bottom: solid;
   position: relative;
-  height: 60vh;
+  height: 65vh;
 }
 .stars-box {
   position:absolute;
