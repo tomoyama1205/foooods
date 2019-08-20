@@ -6,9 +6,20 @@
           Gutty
       %li.menu.col-5
         名古屋(栄)のラーメン屋口コミサイト
-      %li.menu1.col-2
-        =link_to '#', class: "menu1" do
-          新規会員登録
-      %li.menu.col-1
-        =link_to '#', class: "menu" do
-          ログイン
+      - if user_signed_in?
+        %li.menu.col-1
+          =link_to "#", class: "menu" do
+            マイページ
+        %li.menu.col-1
+          =link_to '#', class: "menu" do
+            投稿する
+        %li.menu.col-1
+          =link_to destroy_user_session_path,method: :delete, class: "menu" do
+            ログアウト 
+      - else
+        %li.menu1.col-2
+          =link_to new_user_registration_path, class: "menu1" do
+            新規会員登録
+        %li.menu.col-1
+          =link_to new_user_session_path, class: "menu" do
+            ログイン
