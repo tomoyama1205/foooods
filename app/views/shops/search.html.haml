@@ -1,0 +1,29 @@
+= render 'header'
+.content
+  .content__box.row
+    .content__box__left.col-8
+      .search-box
+        .search-box__top
+          .title
+            投稿するお店を検索
+          = form_tag('/shops/search', method: :get) do
+            %input.select-box{name: "keyword", placeholder: "店名で検索",type: "text", value: ""}
+            %button.select-btn{title: "検索", type: "submit"}
+              = fa_icon "search"
+        .search-box__content
+          .title
+            検索結果
+          .shop
+            = image_tag('247939.jpg', class: "shop__img")
+            .shop__title
+              なるとや
+          .shop
+            = image_tag('824065.jpg', class: "shop__img")
+            .shop__title
+              一蘭 名古屋栄店
+    .content__z.col-1
+    .content__box__right.col-3
+      = render 'side-bar'
+    .content__box__low.col-12
+      top page
+= render 'footer'

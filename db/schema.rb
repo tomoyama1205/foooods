@@ -13,6 +13,15 @@
 ActiveRecord::Schema.define(version: 20190821044553) do
 
   create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "rate"
+    t.text     "review",     limit: 65535
+    t.integer  "shop_id"
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.text     "text",            limit: 65535
     t.string   "regular_holiday"
@@ -21,15 +30,6 @@ ActiveRecord::Schema.define(version: 20190821044553) do
     t.string   "address"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
-  end
-
-  create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "rate"
-    t.text     "review",     limit: 65535
-    t.integer  "shop_id"
-    t.integer  "user_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
