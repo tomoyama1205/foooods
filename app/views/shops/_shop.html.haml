@@ -1,28 +1,10 @@
 .shop-box.col-4.rounded
-  =link_to "shops/1" do
+  =link_to shop_path(shop.id) do
     .shop-box__title
-      なるとや
-    = image_tag('247939.jpg', class: "shop-box__image")
+      = shop.title
+    = image_tag shop.images[0].url, class: "shop-box__image"
     .shop-box__text
-      名古屋で１番の塩ラーメンのお店
+      = shop.text
     .star-box
       .star-rating
         .star-rating-item{style:"width:100%;"}
-.shop-box.col-4.rounded 
-  .shop-box__title
-    一蘭 名古屋栄店
-  = image_tag('824065.jpg', class: "shop-box__image")
-  .shop-box__text
-    仕切りのある独特なカウンターでラーメンに集中できる店
-  .star-box
-    .star-rating
-      .star-rating-item{style:"width:50%;"}
-.shop-box.col-4.rounded 
-  .shop-box__title
-    天下一品 名古屋栄店
-  = image_tag('1904940.jpg', class: "shop-box__image")
-  .shop-box__text
-    こってりが楽しめるラーメンなら天下一品
-  .star-box
-    .star-rating
-      .star-rating-item{style:"width:20%;"}

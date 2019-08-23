@@ -7,26 +7,24 @@
       .show-box.rounded
         .top
           .show-box__title
-            なるとや
+            = @shop.title
           .show-box__img
-            = image_tag('247939.jpg', class: "show-box__img1")
-            = image_tag('247939.jpg', class: "show-box__img2")
-            = image_tag('247939.jpg', class: "show-box__img3")
-            = image_tag('247939.jpg', class: "show-box__img4")
+            - @shop.images.each do |image|
+              = image_tag image.url, class: "show-box__img1"
           .show-box__text
-            名古屋で１番の塩ラーメンのお店
+            = @shop.text
           .show-box__time
-            営業時間：　[月~金・土] ランチ: 11:30〜14:00 ディナー: 18:00〜25:00
+            = "営業時間： #{@shop.business_hours}"
           .show-box__holiday
-            定休日：　毎週日曜日
+            = "定休日： #{@shop.regular_holiday}"
           .show-box__phone
-            電話番号：　052-241-0511
+            = "電話番号：#{@shop.phone_number}"
           .show-box__address
-            住所：　愛知県名古屋市中区栄４-７-１３ 木村ビルディング １F
+            = "住所： #{@shop.address}"
           .stars-box
             .stars-rating
               .stars-rating-item{style:"width:100%;"}
-        = link_to  "1/reviews/new",class: "show-box__link" do
+        = link_to  new_shop_review_path(@shop.id),class: "show-box__link" do
           .show-box__link
             このお店を投稿する
         .show-box__title1
