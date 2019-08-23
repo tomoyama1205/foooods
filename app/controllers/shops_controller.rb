@@ -1,7 +1,8 @@
 class ShopsController < ApplicationController
+  before_action :authenticate_user!, only: :search
 
   def index
-    @shops = Shop.find(1)
+    @shops = Shop.all
   end
 
   def show
@@ -9,6 +10,7 @@ class ShopsController < ApplicationController
   end
 
   def search
+    @shops = Shop.where('title LIKE(?)', "%#{params[:keyword]}%")
   end
   
 end

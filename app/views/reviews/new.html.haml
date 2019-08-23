@@ -10,8 +10,6 @@
             = image_tag @shop.images[0].url, class: "review-box__shop__img"
             .review-box__shop__title
               = @shop.title
-          .review-box__nickname
-            ニックネーム
           = f.label "評価", class: ""
           = f.number_field :rate, placeholder: '評価', value: 1, max: 10, min: 1, class: "review-box__star"
           10段階評価
