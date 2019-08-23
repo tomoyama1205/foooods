@@ -7,9 +7,9 @@
           .review-box__title
             投稿
           .review-box__shop
-            = image_tag('247939.jpg', class: "review-box__shop__img")
+            = image_tag @shop.images[0].url, class: "review-box__shop__img"
             .review-box__shop__title
-              なるとや
+              = @shop.title
           .review-box__nickname
             ニックネーム
           = f.label "評価", class: ""

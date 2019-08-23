@@ -14,13 +14,9 @@
           .title
             検索結果
           .shop
-            = image_tag('247939.jpg', class: "shop__img")
+            = image_tag shop.images[0].url, class: "shop__img"
             .shop__title
-              なるとや
-          .shop
-            = image_tag('824065.jpg', class: "shop__img")
-            .shop__title
-              一蘭 名古屋栄店
+              = shop.title
     .content__z.col-1
     .content__box__right.col-3
       = render 'side-bar'

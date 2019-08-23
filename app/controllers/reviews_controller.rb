@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   def new
-    # @shop = Shop.find(params[:shop_id])
+    @shop = Shop.find(params[:shop_id])
     @review = Review.new
   end
   def create
