@@ -6,17 +6,19 @@
         .search-box__top
           .title
             投稿するお店を検索
-          = form_tag('/shops/search', method: :get) do
+          = form_tag(search_shops_path, method: :get) do
             %input.select-box{name: "keyword", placeholder: "店名で検索",type: "text", value: ""}
             %button.select-btn{title: "検索", type: "submit"}
               = fa_icon "search"
         .search-box__content
           .title
             検索結果
-          .shop
-            = image_tag shop.images[0].url, class: "shop__img"
-            .shop__title
-              = shop.title
+          - @shops.each do |shop|
+            = link_to new_shop_review_path(shop.id) do
+              .shop
+                = image_tag shop.images[0].url, class: "shop__img"
+                .shop__title
+                  = shop.title
     .content__z.col-1
     .content__box__right.col-3
       = render 'side-bar'
