@@ -1,6 +1,4 @@
 class Review < ApplicationRecord
-  has_many :reviews
-  # def review_average
-  #   reviews.average(:rate).round 
-  # end
+  belongs_to :shop
+  belongs_to :user
 end

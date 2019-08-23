@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20190821131413) do
   end
 
   create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "rate"
+    t.float    "rate",       limit: 24
     t.text     "review",     limit: 65535
     t.integer  "shop_id"
     t.integer  "user_id"

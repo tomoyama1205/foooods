@@ -56,7 +56,7 @@ belongs_to :shop
 ### Review
 |Column|Type|Option|
 |------|----|------|
-|rate|string|null: false|
+|rate|float|null: false|
 |review|text|null: false|
 |shop_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
