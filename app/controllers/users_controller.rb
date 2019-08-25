@@ -1,16 +1,7 @@
-class ShopsController < ApplicationController
+class UsersController < ApplicationController
   before_action :ranking
-
-  def index
-    @shops = Shop.all
-  end
-
+  
   def show
-    @shop = Shop.find(params[:id])
-  end
-
-  def search
-    @shops = Shop.where('title LIKE(?)', "%#{params[:keyword]}%")
   end
 
   private

@@ -1,62 +1,59 @@
-.signup-box {
-  padding: 100px;
-  height: 105vh;
-  margin: 0 auto;
-  width: 100vh;
+.user-box {
+  margin: 50px auto;
+  height: auto;
+  width: 50vw;
+  border: groove;
+  &__top {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: groove; 
+  }
+  &__contnet {
+    padding: 0 20px;
+    height: auto;
+  }
+}
+.u-box {
+  height: 30vh;
+  padding: 20px 0 20px 20px;
+  border-bottom: groove;
+  margin-bottom: 20px;
   &__title {
-    text-align: center;
-    font-size: 45px;
-    font-weight: bold;
-    letter-spacing: 0.05em; 
+    font-size: 20px;
+    height: 5vh;
   }
-  &__title2 {
-    text-align: center;
-    font-size: 15px;
-    margin-bottom: 30px
-  }
-}
-
-.signin-box {
-  padding: 100px;
-  height: 90vh;
-  margin: 0 auto;
-  width: 100vh;
-  &__title {
-    text-align: center;
-    font-size: 45px;
-    font-weight: bold;
-    letter-spacing: 0.05em; 
-  }
-  &__title2 {
-    text-align: center;
-    font-size: 15px;
-    margin-bottom: 30px
+  &__contnet {
+    display: flex;
+    &__img {
+      height: 15vh;
+      width: 10vw;
+      margin-bottom: 10px; 
+    }
+    &__review {
+      margin-left: 30px;
+      font-size: 18px;
+    }
   }
 }
-
-.field {
-  margin: 25px 125px;
-  font-size: 15px;
-}
-
-.field1 {
-  margin: 50px 160px;
-}
-
-.box {
-  height: 5vh;
-  width: 25vw;
+.u-btn1 {
+  margin-left: 28vw;  
   border-radius: 4px;
   border: 1px solid #ccc;
-  padding: 10px;
-}
-
-.btn {
-  background-color: red;
+  height: 4vh;
+  width: 8vw;
+  background-color: grey;
   color: white;
-  height: 7vh;
-  width: 20vw;
-  margin: 0 auto;
-  font-size: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.u-btn2 {  
   border-radius: 4px;
+  border: 1px solid #ccc;
+  height: 4vh;
+  width: 8vw;
+  background-color: gray;
+  color: white;
+  font-size: 15px;
+  cursor: pointer; 
 }

@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!, only: :new
-  before_action :ranking, only: new
+  before_action :ranking
 
   def new
     @shop = Shop.find(params[:shop_id])
@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
   end
 
   def ranking
-    shop_ids = @shops.reviews.average(:rate).order('count_shop_id DESC').limit(3).count(:shop_id).keys
+    shop_ids = Review.group(:shop_id).order('average_rate DESC').limit(3).average(:rate).keys
     @ranking = shop_ids.map { |id| Shop.find(id) }
   end
 end
