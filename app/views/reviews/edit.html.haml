@@ -1,0 +1,23 @@
+= render 'shops/header'
+.content
+  .content__box.row
+    .content__box__left.col-8
+      = form_for (@review), method: :patch do |f|
+        .review-box
+          .review-box__title
+            編集
+          .review-box__shop
+            = image_tag @review.shop.images[0].url, class: "review-box__shop__img"
+            .review-box__shop__title
+              = @review.shop.title
+          = f.label "評価", class: ""
+          = f.number_field :rate, placeholder: '評価', value: 1.0, max: 5.0, min: 1, step: 0.1, class: "review-box__star"
+          5段階評価
+          = f.text_area :review, class: "review-box__text", placeholder: "レビューを書いてね！" 
+          = f.submit '編集する', class: "review-box__btn"
+    .content__z.col-1
+    .content__box__right.col-3
+      = render 'shops/side-bar'
+    .content__box__low.col-12
+      top page
+= render 'shops/footer'

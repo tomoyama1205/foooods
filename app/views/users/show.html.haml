@@ -19,10 +19,12 @@
               .stars-box
                 .stars-rating
                   .stars-rating-item{style:"width: #{number_to_percentage(review.rate*20)}"}
-              %button.u-btn1
-                編集する
-              %button.u-btn2
-                削除する
+                %button.u-btn1
+                  = link_to edit_review_path(review.id), method: :get do
+                    編集する
+                %button.u-btn2
+                  = link_to review_path(review.id),method: :delete do
+                    削除する
     .content__z.col-1
     .content__box__right.col-3
       = render 'shops/side-bar'
