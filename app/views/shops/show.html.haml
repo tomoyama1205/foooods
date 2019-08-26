@@ -25,9 +25,11 @@
             - if @shop.reviews.present?
               .star-rating
                 .star-rating-item{style:"width: #{number_to_percentage(@shop.reviews.average(:rate).round*20)}"}
+              = "#{number_with_precision(@shop.reviews.average(:rate), precision:2, significant: true)}"
             - else
               .star-rating
                 .star-rating-item{style:"width: 0%"}
+              = 0.0
         = link_to  new_shop_review_path(@shop.id),class: "show-box__link" do
           .show-box__link
             このお店を投稿する
@@ -42,6 +44,7 @@
             .stars-box
               .stars-rating
                 .stars-rating-item{style:"width: #{number_to_percentage(review.rate*20)}"}
+              = "#{number_with_precision(review.rate, precision:2, significant: true)}"
     .content__z.col-1
     .content__box__right.col-3
       = render 'side-bar'

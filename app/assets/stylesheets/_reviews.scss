@@ -16,6 +16,7 @@
     border: 1px solid #ccc;
     display: flex;
     margin: 20px 0;
+    position: relative;
     &__img {
       height: 15vh;
       width: 10vw;
@@ -23,6 +24,10 @@
     &__title {
       padding: 10px;
       font-size: 20px;
+    }
+    &__text {
+      padding: 10px;
+      font-size: 15px;
     }
   }
   &__star {
