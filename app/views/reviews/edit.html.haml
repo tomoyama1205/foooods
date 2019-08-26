@@ -10,6 +10,17 @@
             = image_tag @review.shop.images[0].url, class: "review-box__shop__img"
             .review-box__shop__title
               = @review.shop.title
+              .review-box__shop__text
+                = @review.shop.text
+            .starss-box
+              - if @review.shop.present?
+                .star-rating
+                  .star-rating-item{style:"width: #{number_to_percentage(@review.rate.round*20)}"}
+                = "#{number_with_precision(@review.rate, precision:2, significant: true)}"
+              - else
+                .star-rating
+                  .star-rating-item{style:"width: 0%"}
+                = 0.0
           = f.label "評価", class: ""
           = f.number_field :rate, placeholder: '評価', value: 1.0, max: 5.0, min: 1, step: 0.1, class: "review-box__star"
           5段階評価

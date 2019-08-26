@@ -42,6 +42,7 @@
   margin: 10px 0;
   display: flex;
   padding: 15px;
+  position: relative;
   &__img {
     height: 15vh;
     width: 10vw;
@@ -51,4 +52,32 @@
     padding: 20px;
     color: black;
   }
+  &__text {
+    font-size: 15px;
+    padding: 20px;
+    color: black;
+  }
+}
+
+.starss-box {
+  position:absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.starss-rating {
+  position: relative;
+  display:inline-block;
+  font-size: 25px;
+}
+.starss-rating .starss-rating-item{
+  position:absolute;
+  overflow: hidden;
+}
+.starss-rating .starss-rating-item:before{
+  content:"★★★★★";
+  color: #ffcc33;
+}
+.starss-rating:after {
+  content:"★★★★★";
+  color: #ccc;
 }

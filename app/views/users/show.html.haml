@@ -14,11 +14,14 @@
                 = review.shop.title
               .u-box__contnet
                 = image_tag review.shop.images[0].url, class: "u-box__contnet__img"
-                .u-box__contnet__review
-                  = review.review
+                .u-box__text
+                  = review.shop.text
+                  .u-box__contnet__review
+                    = review.review
               .stars-box
                 .stars-rating
                   .stars-rating-item{style:"width: #{number_to_percentage(review.rate*20)}"}
+                = "#{number_with_precision(review.rate, precision:2, significant: true)}"
                 %button.u-btn1
                   = link_to edit_review_path(review.id), method: :get do
                     編集する

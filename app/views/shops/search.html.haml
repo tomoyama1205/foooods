@@ -19,6 +19,17 @@
                 = image_tag shop.images[0].url, class: "shop__img"
                 .shop__title
                   = shop.title
+                  .shop__text
+                    = shop.text
+                .starss-box
+                  - if shop.reviews.present?
+                    .star-rating
+                      .star-rating-item{style:"width: #{number_to_percentage(shop.reviews.average(:rate).round*20)}"}
+                    = "#{number_with_precision(shop.reviews.average(:rate), precision:2, significant: true)}"
+                  - else
+                    .star-rating
+                      .star-rating-item{style:"width: 0%"}
+                    = 0.0
     .content__z.col-1
     .content__box__right.col-3
       = render 'side-bar'
