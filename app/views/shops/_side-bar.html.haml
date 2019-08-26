@@ -19,3 +19,7 @@
         - else
           .star-rating
             .star-rating-item{style:"width: 0%"}
+        - if shop.reviews.present?
+          = "#{number_with_precision(shop.reviews.average(:rate), precision:2, significant: true)}"
+        - else
+          = 0.0
