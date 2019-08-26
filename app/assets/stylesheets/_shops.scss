@@ -1,8 +1,14 @@
+.thumbnail { 
+  width: 100%;
+  margin: 0 auto; 
+  object-fit: cover;
+}
+
 .content {
   max-width: 100%;
   height: auto;
   &__box {
-    padding: 50px 50px 50px 80px;
+    padding: 20px 50px 50px 80px;
     height: auto;
     &__left {
       width: 100%;
