@@ -1,6 +1,6 @@
 @import "reset";
 // @import "mixin";
-// @import "variables";
+@import "variables";
 @import "bootstrap";
 @import "font-awesome";
 @import "header";
@@ -10,3 +10,4 @@
 @import "searches";
 @import "reviews";
 @import "users";
+@import "flash";

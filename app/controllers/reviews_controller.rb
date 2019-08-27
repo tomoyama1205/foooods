@@ -6,9 +6,15 @@ class ReviewsController < ApplicationController
     @shop = Shop.find(params[:shop_id])
     @review = Review.new
   end
+
   def create
-    Review.create(create_params)
-    redirect_to root_path
+    @review = Review.new(create_params)
+    if @review.save
+      redirect_to root_path, notice: '投稿が完了しました'
+    else
+      flash.now[:alert] = '投稿内容を入力してください。'
+      render :index
+    end
   end
 
   def destroy
@@ -16,7 +22,7 @@ class ReviewsController < ApplicationController
     if review.user_id == current_user.id
       review.destroy
     end
-      redirect_to user_path(current_user.id)
+    redirect_to user_path(current_user.id), notice: '投稿を削除しました'
   end
 
   def edit
@@ -28,7 +34,7 @@ class ReviewsController < ApplicationController
     if @review.user_id == current_user.id
       @review.update_attributes(review_params)
     end
-      redirect_to user_path(current_user.id)
+      redirect_to user_path(current_user.id), notice: '投稿を編集しました'
   end
 
   private
