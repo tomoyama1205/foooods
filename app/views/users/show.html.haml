@@ -1,7 +1,6 @@
-= render 'shops/header'
 .content
   .content__box.row
-    .content__box__left.col-8
+    .content__box__left.col-xl-8
       .user-box
         .user-box__top
           = current_user.nickname
@@ -28,9 +27,8 @@
                 %button.u-btn2
                   = link_to review_path(review.id),method: :delete do
                     削除する
-    .content__z.col-1
-    .content__box__right.col-3
+    .content__z.col-xl-1
+    .content__box__right.col-xl-3
       = render 'shops/side-bar'
-    %p#pageTop.content__box__low.col-12
+    %p#pageTop.content__box__low.col-xl-12
       top page
-= render 'shops/footer'

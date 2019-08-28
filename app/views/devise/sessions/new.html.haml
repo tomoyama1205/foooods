@@ -1,7 +1,6 @@
-= render "shops/header"
 .signin-box
   %h2.signup-box__title
-    Gutty
+    Satty
   %h4.signup-box__title2
     ログイン
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
@@ -19,4 +18,3 @@
         = f.label :remember_me
     .field1
       = f.submit "ログイン", class: "btn"
-= render "shops/footer"

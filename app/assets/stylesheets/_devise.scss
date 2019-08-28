@@ -1,8 +1,7 @@
 .signup-box {
   padding: 100px;
-  height: 105vh;
+  height: auto;
   margin: 0 auto;
-  width: 100vh;
   &__title {
     text-align: center;
     font-size: 45px;
@@ -18,9 +17,8 @@
 
 .signin-box {
   padding: 100px;
-  height: 90vh;
+  height: auto;
   margin: 0 auto;
-  width: 100vh;
   &__title {
     text-align: center;
     font-size: 45px;
@@ -35,12 +33,14 @@
 }
 
 .field {
-  margin: 25px 125px;
+  margin: 25px auto;
   font-size: 15px;
+  width: 20vw;
 }
 
 .field1 {
-  margin: 50px 160px;
+  margin: 50px auto;
+  width: 15vw;
 }
 
 .box {

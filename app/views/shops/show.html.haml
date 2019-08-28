@@ -1,9 +1,6 @@
-.show-header
-  = render 'header'
-
 .content
   .content__box.row
-    .content__box__left.col-8
+    .content__box__left.col-xl-8
       .show-box.rounded
         .top
           .show-box__title
@@ -45,10 +42,8 @@
               .stars-rating
                 .stars-rating-item{style:"width: #{number_to_percentage(review.rate*20)}"}
               = "#{number_with_precision(review.rate, precision:2, significant: true)}"
-    .content__z.col-1
-    .content__box__right.col-3
+    .content__z.col-xl-1
+    .content__box__right.col-xl-3
       = render 'side-bar'
-    %p#pageTop.content__box__low.col-12
+    %p#pageTop.content__box__low.col-xl-12
       top page
-.show-footer
-  = render 'footer'

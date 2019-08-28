@@ -1,7 +1,6 @@
-= render 'shops/header'
 .content
   .content__box.row
-    .content__box__left.col-8
+    .content__box__left.col-xl-8
       = form_for (@review), method: :patch do |f|
         .review-box
           .review-box__title
@@ -26,9 +25,8 @@
           5段階評価
           = f.text_area :review, class: "review-box__text", placeholder: "レビューを書いてね！" 
           = f.submit '編集する', class: "review-box__btn"
-    .content__z.col-1
-    .content__box__right.col-3
+    .content__z.col-xl-1
+    .content__box__right.col-xl-3
       = render 'shops/side-bar'
-    %p#pageTop.content__box__low.col-12
+    %p#pageTop.content__box__low.col-xl-12
       top page
-= render 'shops/footer'
