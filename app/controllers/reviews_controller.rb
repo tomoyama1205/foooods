@@ -12,8 +12,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to root_path, notice: '投稿が完了しました'
     else
-      flash.now[:alert] = '投稿内容を入力してください。'
-      render :index
+      redirect_to new_shop_review_url, alert: '投稿内容を入力してください'
     end
   end
 
